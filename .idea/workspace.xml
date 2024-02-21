@@ -63,6 +63,21 @@
       <recent name="C:\PROGRAMACION 2\SEMANA 3\co.edu.uniquindio.biblioteca\co.edu.uniquindio.biblioteca\src\main\java\co\edu\uniquindio\biblioteca\model" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Principios_SOLID_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Principios_SOLID_2" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
