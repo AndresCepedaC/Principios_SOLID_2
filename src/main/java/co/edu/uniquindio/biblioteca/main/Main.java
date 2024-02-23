@@ -32,11 +32,22 @@ public class Main {
         biblioteca.getListaPrestamos().add(prestamo);biblioteca.getListaEmpleados().add(bibliotecario);biblioteca.getListaMultas().add(multa);
         return biblioteca;
     }
+
+    /**
+     * Metodo para imprimir los items de la lista de items {comprobar principio de liskov}
+     * @param listaItems
+     */
     public static void imprimirItems(List<Item> listaItems){
         for (Item item : listaItems){
             System.out.println("Item: " + item.toString());
         }
     }
+
+    /**
+     * metodo para imprimir la lista de prestamos que tenga un miembro
+     * @param biblioteca
+     * @param ID
+     */
     public static void encontrarPrestamoMiembro(Biblioteca biblioteca, String ID){
         for (Miembro miembro: biblioteca.getListaMiembros()){
             if (miembro.getID().equalsIgnoreCase(ID)){
@@ -48,6 +59,12 @@ public class Main {
             }
         }
     }
+
+    /**
+     * Metodo para encontrar el miembro en base al item
+     * @param biblioteca
+     * @param ISBN
+     */
     public static void buscarMiembroAsociado(Biblioteca biblioteca, String ISBN){
         for (Item item : biblioteca.getListaItems()){
             if (item.getISBN().equalsIgnoreCase(ISBN)){
