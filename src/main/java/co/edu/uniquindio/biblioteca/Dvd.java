@@ -1,12 +1,20 @@
 package co.edu.uniquindio.biblioteca;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Dvd extends Item{
-    private Date fechaLanzamiento;
+    private LocalDate fechaLanzamiento;
 
-    public Dvd(String titulo, String ISBN, boolean estado, Prestamo prestamo, Date fechaLanzamiento) {
-        super(titulo, ISBN, estado, prestamo);
+    public Dvd(String titulo, String ISBN, boolean estado, LocalDate fechaLanzamiento) {
+        super(titulo, ISBN, estado);
+        this.fechaLanzamiento = fechaLanzamiento;
+    }
+
+    public LocalDate getFechaLanzamiento() {
+        return fechaLanzamiento;
+    }
+
+    public void setFechaLanzamiento(LocalDate fechaLanzamiento) {
         this.fechaLanzamiento = fechaLanzamiento;
     }
 }

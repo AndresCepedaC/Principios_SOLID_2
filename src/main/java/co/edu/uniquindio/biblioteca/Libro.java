@@ -1,11 +1,9 @@
 package co.edu.uniquindio.biblioteca;
 
-import co.edu.uniquindio.biblioteca.Prestamo;
-
 public class Libro extends Item {
     private String autor;
-    public Libro(String titulo, String ISBN, boolean estado, Prestamo prestamo, String autor) {
-        super(titulo, ISBN, estado, prestamo);
+    public Libro(String titulo, String ISBN, boolean estado, String autor) {
+        super(titulo, ISBN, estado);
         this.autor = autor;
     }
     public String getAutor() {

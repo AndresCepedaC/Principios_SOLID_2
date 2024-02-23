@@ -3,8 +3,8 @@ package co.edu.uniquindio.biblioteca;
 public class Revista extends Item{
     private String volumen;
 
-    public Revista(String titulo, String ISBN, boolean estado, Prestamo prestamo, String volumen) {
-        super(titulo, ISBN, estado, prestamo);
+    public Revista(String titulo, String ISBN, boolean estado, String volumen) {
+        super(titulo, ISBN, estado);
         this.volumen = volumen;
     }
 

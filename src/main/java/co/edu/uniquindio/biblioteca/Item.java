@@ -6,11 +6,11 @@ public abstract class Item {
     private boolean estado;
     private Prestamo prestamo;
 
-    public Item(String titulo, String ISBN, boolean estado, Prestamo prestamo) {
+    public Item(String titulo, String ISBN, boolean estado) {
         this.titulo = titulo;
         this.ISBN = ISBN;
         this.estado = estado;
-        this.prestamo = prestamo;
+
     }
 
     public Prestamo getPrestamo() {
