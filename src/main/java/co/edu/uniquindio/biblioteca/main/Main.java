@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args){
         Biblioteca biblioteca = inicializarDatosPrueba();
 
-        encontrarPrestamoMiembro(biblioteca,"1234");
+        imprimirPrestamoMiembro(biblioteca,"1234");
         imprimirItems(biblioteca.getListaItems());
     }
     public static Biblioteca inicializarDatosPrueba(){
@@ -48,7 +48,7 @@ public class Main {
      * @param biblioteca
      * @param ID
      */
-    public static void encontrarPrestamoMiembro(Biblioteca biblioteca, String ID){
+    public static void imprimirPrestamoMiembro(Biblioteca biblioteca, String ID){
         for (Miembro miembro: biblioteca.getListaMiembros()){
             if (miembro.getID().equalsIgnoreCase(ID)){
                 for (Prestamo prestamo : miembro.getListaPrestamos()){
@@ -75,4 +75,25 @@ public class Main {
         }
     }
 
+    /**
+     * Metodo para confirmar un prestamo ingresando el Id del miembro e ISBN del Item
+     * @param biblioteca
+     * @param ID
+     * @param ISBN
+     */
+    public static void confirmarPrestamoMiembro(Biblioteca biblioteca, String ID, String ISBN){
+        for (Miembro miembro : biblioteca.getListaMiembros()){
+            if (miembro.getID().equalsIgnoreCase(ID)) {
+                for (Prestamo prestamo : miembro.getListaPrestamos()){
+                    if (prestamo.getItem().getISBN().equalsIgnoreCase(ISBN)){
+                        System.out.println("El item con titulo " + prestamo.getItem().getTitulo() + "esta asociado a el miembro con nombre: " + miembro.getNombre());
+                    }else{
+                        System.out.println("El item no existe.");
+                    }
+                }
+            }else{
+                System.out.println("El miembro no existe.");
+            }
+        }
+    }
 }
