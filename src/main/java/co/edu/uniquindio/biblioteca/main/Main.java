@@ -7,6 +7,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args){
@@ -94,6 +95,33 @@ public class Main {
             }else{
                 System.out.println("El miembro no existe.");
             }
+        }
+    }
+
+    /**
+     * Metodo para asignar una multa a un miembro
+     * @param biblioteca
+     * @param miembro
+     * @param valor
+     */
+    public static void asignarMulta(Biblioteca biblioteca, Miembro miembro, double valor){
+        Multa multa = new Multa();
+        Random random = new Random();
+        int numeroID = random.nextInt(300) + 1;
+        multa.setMiembro(miembro);
+        multa.setIdMulta(String.valueOf(numeroID));
+        multa.setValorMulta(valor);
+        biblioteca.getListaMultas().add(multa);
+    }
+
+    /**
+     * metodo para imprimir la lista de multas que tenga un miembro
+     * @param biblioteca
+     * @param miembro
+     */
+    public static void imprimirMultasMiembro(Biblioteca biblioteca, Miembro miembro){
+        for (Multa multa : miembro.getListaMultas()){
+            System.out.println(multa.toString());
         }
     }
 }
