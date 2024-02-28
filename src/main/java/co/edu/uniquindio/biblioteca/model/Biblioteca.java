@@ -7,6 +7,7 @@ public class Biblioteca {
     private String nombre;
 
     private List<Empleado> listaEmpleados = new ArrayList<>();
+    private List<Miembro> listaMiembros = new ArrayList<>();
     private List<Libro> listaLibros = new ArrayList<>();
     private List<Dvd> listaDvds = new ArrayList<>();
     private List<Revista> listaRevistas = new ArrayList<>();
@@ -79,5 +80,13 @@ public class Biblioteca {
 
     public void setListaMultas(List<Multa> listaMultas) {
         this.listaMultas = listaMultas;
+    }
+
+    public List<Miembro> getListaMiembros() {
+        return listaMiembros;
+    }
+
+    public void setListaMiembros(List<Miembro> listaMiembros) {
+        this.listaMiembros = listaMiembros;
     }
 }

@@ -1,14 +1,11 @@
 package co.edu.uniquindio.biblioteca.model;
 
-public class Libro {
+public class Libro extends Item {
     private String autor;
-    private Prestamo prestamo;
-
-    public Libro(String autor, Prestamo prestamo) {
+    public Libro(String titulo, String ISBN, boolean estado, String autor) {
+        super(titulo, ISBN, estado);
         this.autor = autor;
-        this.prestamo = prestamo;
     }
-
     public String getAutor() {
         return autor;
     }
@@ -17,12 +14,10 @@ public class Libro {
         this.autor = autor;
     }
 
-
-    public Prestamo getPrestamo() {
-        return prestamo;
-    }
-
-    public void setPrestamo(Prestamo prestamo) {
-        this.prestamo = prestamo;
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "autor='" + autor + '\'' +
+                '}';
     }
 }

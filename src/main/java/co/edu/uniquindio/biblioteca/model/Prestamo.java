@@ -1,26 +1,29 @@
 package co.edu.uniquindio.biblioteca.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Prestamo {
-    private Libro libro;
+    private Item item;
     private Miembro miembro;
-    private Date fechaPrestamo;
-    private Date fechaDevolucion;
+    private LocalDate fechaPrestamo;
+    private LocalDate fechaDevolucion;
 
-    public Prestamo(Libro libro, Miembro miembro, Date fechaPrestamo, Date fechaDevolucion) {
-        this.libro = libro;
+    public Prestamo(Item item, Miembro miembro, LocalDate fechaPrestamo, LocalDate fechaDevolucion) {
+        this.item = item;
         this.miembro = miembro;
         this.fechaPrestamo = fechaPrestamo;
         this.fechaDevolucion = fechaDevolucion;
     }
 
-    public Libro getLibro() {
-        return libro;
+    public Prestamo() {
     }
 
-    public void setLibro(Libro libro) {
-        this.libro = libro;
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 
     public Miembro getMiembro() {
@@ -31,19 +34,29 @@ public class Prestamo {
         this.miembro = miembro;
     }
 
-    public Date getFechaPrestamo() {
+    public LocalDate getFechaPrestamo() {
         return fechaPrestamo;
     }
 
-    public void setFechaPrestamo(Date fechaPrestamo) {
+    public void setFechaPrestamo(LocalDate fechaPrestamo) {
         this.fechaPrestamo = fechaPrestamo;
     }
 
-    public Date getFechaDevolucion() {
+    public LocalDate getFechaDevolucion() {
         return fechaDevolucion;
     }
 
-    public void setFechaDevolucion(Date fechaDevolucion) {
+    public void setFechaDevolucion(LocalDate fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
+    }
+
+    @Override
+    public String toString() {
+        return "Prestamo{" +
+                "libro=" + item +
+                ", miembro=" + miembro +
+                ", fechaPrestamo=" + fechaPrestamo +
+                ", fechaDevolucion=" + fechaDevolucion +
+                '}';
     }
 }

@@ -1,9 +1,7 @@
-package co.edu.uniquindio.biblioteca.main;
+package co.edu.uniquindio.biblioteca;
 
-import co.edu.uniquindio.biblioteca.*;
+import co.edu.uniquindio.biblioteca.model.*;
 
-import java.net.IDN;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.List;

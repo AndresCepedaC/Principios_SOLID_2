@@ -4,11 +4,21 @@ public abstract class Item {
     private String titulo;
     private String ISBN;
     private boolean estado;
+    private Prestamo prestamo;
 
-    public Item(String titulo, String ISBN) {
+    public Item(String titulo, String ISBN, boolean estado) {
         this.titulo = titulo;
         this.ISBN = ISBN;
         this.estado = estado;
+
+    }
+
+    public Prestamo getPrestamo() {
+        return prestamo;
+    }
+
+    public void setPrestamo(Prestamo prestamo) {
+        this.prestamo = prestamo;
     }
 
     public String getTitulo() {
