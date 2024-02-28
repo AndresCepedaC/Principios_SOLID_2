@@ -62,6 +62,8 @@ public class ComputerBuilder implements IBuild {
     }
 
     public Computer getResult(){
-        return new Computer(processor,memoryRAM,powerSource,ssd,graphicCard,cabinet,fans, typeCompute, motherBoard);
+        return new Computer(processor,memoryRAM,
+                powerSource,ssd,graphicCard,cabinet,fans,
+                typeCompute, motherBoard);
     }
 }
